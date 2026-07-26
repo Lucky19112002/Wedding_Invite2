@@ -9,9 +9,8 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // NOTE: If you are hosting at github.com/username/repo-name instead of username.github.io,
-  // uncomment the next line and replace 'repo-name' with your actual repository name.
-  // basePath: '/repo-name',
+  // Required since your repo is named 'Wedding_Invite2'
+  basePath: '/Wedding_Invite2',
 };
 
 export default nextConfig;
