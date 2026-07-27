@@ -128,43 +128,56 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
           transition={{ duration: 1.5, ease: [0.25, 1, 0.5, 1] }}
         >
           {/* Envelope Body (Back) */}
-          <div className="absolute inset-0 bg-[#F8F0DC] envelope-linen shadow-[0_30px_60px_rgba(0,0,0,0.5)] rounded-md overflow-hidden border border-[#D4AF37]/20">
-            {/* Gold foil trim */}
-            <div className="absolute inset-2 border-[1.5px] border-[#D4AF37]/40 rounded-sm">
-              <div className="absolute inset-0 animate-shimmer opacity-50 pointer-events-none" />
+          <div className="absolute inset-0 bg-[#A3B19B] envelope-linen shadow-[0_30px_60px_rgba(0,0,0,0.5)] rounded-md overflow-hidden border border-[#8A9A82]/20">
+            {/* Subtle inner shadow/border */}
+            <div className="absolute inset-1 border-[1px] border-white/20 rounded-sm">
+              <div className="absolute inset-0 animate-shimmer opacity-30 pointer-events-none" />
             </div>
             
-            {/* Floral motifs (SVG) */}
-            <svg className="absolute top-4 left-4 w-12 h-12 text-[#D4AF37]/30" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C9.5 2 7 4 7 7c0 2 1.5 3.5 3.5 3.5 0 2-2 4-4 4-1.5 0-2.5-1-2.5-2 0-2 2-3 2-3s-1-2-3-2c-1.5 0-3 1.5-3 3.5C0 14.5 3 16 6 16c2.5 0 4-1.5 5.5-3 .5 1 .5 2 .5 2s-1.5 2-1.5 3.5c0 1.5 1 2.5 2.5 2.5 1.5 0 2.5-1 2.5-2.5 0-1.5-1.5-2.5-1.5-3.5 0 0 0-1 .5-2 1.5 1.5 3 3 5.5 3 3 0 6-1.5 6-4 0-2-1.5-3-3-3s-2.5 1-2.5 2c0 1-2-1-2-1-2 0-4-2-4-4 0-1.5 1.5-2.5 3.5-3.5 1.5 0 3-1.5 3-3.5 0-2-2-4-4.5-4z"/>
-            </svg>
-            <svg className="absolute bottom-4 right-4 w-12 h-12 text-[#D4AF37]/30 rotate-180" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C9.5 2 7 4 7 7c0 2 1.5 3.5 3.5 3.5 0 2-2 4-4 4-1.5 0-2.5-1-2.5-2 0-2 2-3 2-3s-1-2-3-2c-1.5 0-3 1.5-3 3.5C0 14.5 3 16 6 16c2.5 0 4-1.5 5.5-3 .5 1 .5 2 .5 2s-1.5 2-1.5 3.5c0 1.5 1 2.5 2.5 2.5 1.5 0 2.5-1 2.5-2.5 0-1.5-1.5-2.5-1.5-3.5 0 0 0-1 .5-2 1.5 1.5 3 3 5.5 3 3 0 6-1.5 6-4 0-2-1.5-3-3-3s-2.5 1-2.5 2c0 1-2-1-2-1-2 0-4-2-4-4 0-1.5 1.5-2.5 3.5-3.5 1.5 0 3-1.5 3-3.5 0-2-2-4-4.5-4z"/>
-            </svg>
+            {/* Decorative background lining (visible when flap opens) */}
+            <div className="absolute inset-0 opacity-10" style={{
+              backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+            }} />
           </div>
 
           {/* Invitation Card (Inside) */}
           <motion.div 
-            className="absolute inset-[4px] bg-[#FFFFF0] rounded-sm z-10 flex flex-col items-center justify-center p-8 shadow-inner border border-gray-200/50"
+            className="absolute inset-[4px] bg-white rounded-sm z-10 flex flex-col items-center justify-center p-6 shadow-inner border border-gray-100"
             initial={{ y: 0, opacity: 0 }}
             animate={{ 
-              y: isCardRevealed ? -120 : 0,
+              y: isCardRevealed ? -160 : 0,
               opacity: isFlapOpen ? 1 : 0
             }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <div className="w-full h-full border border-[#D4AF37]/30 rounded p-4 flex flex-col items-center justify-center relative overflow-hidden">
-               <div className="absolute inset-0 bg-texture opacity-20" />
-               <div className="z-10 text-center">
-                  <h2 className="font-serif text-3xl md:text-5xl text-[#800000] mb-2 tracking-wide">K & L</h2>
-                  <p className="font-sans text-xs uppercase tracking-[0.3em] text-[#D4AF37]">The Wedding</p>
-               </div>
+            {/* Leafy Wreath Graphic */}
+            <svg className="absolute top-8 w-48 h-32 text-[#7B906F]" viewBox="0 0 200 100" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M 20 100 Q 20 30 100 20 Q 180 30 180 100" strokeDasharray="4 4" opacity="0.5"/>
+              <path d="M 20 100 Q 40 40 100 30 Q 160 40 180 100" />
+              {/* Leaves left */}
+              <path d="M 40 70 Q 30 60 40 50 Q 50 60 40 70" fill="currentColor" opacity="0.8"/>
+              <path d="M 50 55 Q 45 40 60 40 Q 65 50 50 55" fill="currentColor" opacity="0.6"/>
+              <path d="M 70 40 Q 60 30 75 25 Q 85 35 70 40" fill="currentColor" opacity="0.7"/>
+              {/* Leaves right */}
+              <path d="M 160 70 Q 170 60 160 50 Q 150 60 160 70" fill="currentColor" opacity="0.8"/>
+              <path d="M 150 55 Q 155 40 140 40 Q 135 50 150 55" fill="currentColor" opacity="0.6"/>
+              <path d="M 130 40 Q 140 30 125 25 Q 115 35 130 40" fill="currentColor" opacity="0.7"/>
+              {/* Little red berries */}
+              <circle cx="60" cy="65" r="2" fill="#D32F2F" stroke="none" />
+              <circle cx="75" cy="50" r="2" fill="#D32F2F" stroke="none" />
+              <circle cx="125" cy="50" r="2" fill="#D32F2F" stroke="none" />
+              <circle cx="140" cy="65" r="2" fill="#D32F2F" stroke="none" />
+            </svg>
+            
+            <div className="text-center w-full flex flex-col items-center gap-4 z-10 mt-12">
+              <h2 className="font-serif text-3xl md:text-5xl text-[#3A4533] tracking-widest mt-2">K & L</h2>
+              <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-[#7B906F] mt-2">Wedding Invite</p>
             </div>
           </motion.div>
 
           {/* Envelope Flap (Top) */}
           <motion.div
-            className="absolute top-0 left-0 w-full h-[55%] origin-top z-20 will-change-transform backface-hidden"
+            className="absolute top-0 left-0 w-full h-[65%] origin-top z-20 will-change-transform backface-hidden drop-shadow-xl"
             initial={{ rotateX: 0 }}
             animate={{ 
               rotateX: isFlapOpen ? -180 : 0,
@@ -172,19 +185,25 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
             }}
             transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
           >
-            {/* Front of Flap */}
-            <div className="absolute inset-0 bg-[#F8F0DC] envelope-linen shadow-[0_10px_20px_rgba(0,0,0,0.2)] rounded-b-[45%] border-b border-[#D4AF37]/30 backface-hidden">
-               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
+            {/* Front of Flap (Pointed downward) */}
+            <div 
+              className="absolute inset-0 bg-[#A3B19B] envelope-linen backface-hidden flex items-center justify-center overflow-hidden border-b border-white/20"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 50% 100%)' }}
+            >
+               {/* Decorative border matching the point */}
+               <div className="absolute inset-0 border-[2px] border-white/20 opacity-50 pointer-events-none" style={{ clipPath: 'polygon(5% 5%, 95% 5%, 50% 90%)' }} />
             </div>
-            {/* Back of Flap (Inner Lining) */}
-            <div className="absolute inset-0 bg-[#1B4332] rounded-b-[45%] shadow-inner border-t border-black/20 backface-hidden" style={{ transform: 'rotateX(180deg)' }}>
-               {/* Chevron pattern for inner lining */}
-               <div className="absolute inset-0 opacity-20" style={{
-                 backgroundImage: 'linear-gradient(45deg, #D4AF37 25%, transparent 25%, transparent 75%, #D4AF37 75%, #D4AF37), linear-gradient(45deg, #D4AF37 25%, transparent 25%, transparent 75%, #D4AF37 75%, #D4AF37)',
-                 backgroundSize: '20px 20px',
-                 backgroundPosition: '0 0, 10px 10px'
+            
+            {/* Back of Flap (Inner Lining visible when flipped) */}
+            <div 
+              className="absolute inset-0 bg-[#8A9A82] shadow-inner border-t border-black/20 backface-hidden"
+              style={{ transform: 'rotateX(180deg)', clipPath: 'polygon(0 100%, 100% 100%, 50% 0)' }}
+            >
+               {/* Pattern matching the inside body */}
+               <div className="absolute inset-0 opacity-15" style={{
+                 backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
                }} />
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-b-[45%]" />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </motion.div>
 
