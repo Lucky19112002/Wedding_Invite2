@@ -29,8 +29,8 @@ export default function CoupleSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="w-24 h-24 mb-6 rounded-full bg-[#F9E0E8] border-2 border-[#D4AF37] flex items-center justify-center text-3xl">
-              🌸
+            <div className="w-24 h-24 mb-6 rounded-full bg-[#F9E0E8] border-2 border-[#D4AF37] flex items-center justify-center text-3xl overflow-hidden">
+              <img src="/Wedding_Invite2/BrideImaghe.jpeg" alt="Bride" className="w-full h-full object-cover" />
             </div>
             <h3 className="font-serif text-3xl text-[#800000] mb-2">Dr. Sayed Kareena</h3>
             <p className="font-sans text-[#D4AF37] text-sm uppercase tracking-widest font-semibold mb-4">
