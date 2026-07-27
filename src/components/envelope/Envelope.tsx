@@ -241,24 +241,14 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
           {/* Wax Seal Base & Fragments */}
           <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-40 w-24 h-24 perspective-1200">
              {!isCracked ? (
-               // Intact Seal
+                 // Intact Seal
                <motion.button
                  onClick={handleOpen}
-                 className="w-full h-full rounded-full bg-gradient-to-br from-[#A52A2A] via-[#8B0000] to-[#5C0000] shadow-[0_5px_15px_rgba(0,0,0,0.4),inset_0_2px_5px_rgba(255,255,255,0.3)] flex items-center justify-center cursor-pointer border-2 border-[#5C0000] animate-seal-pulse relative overflow-hidden"
+                 className="w-full h-full rounded-full flex items-center justify-center cursor-pointer shadow-[0_5px_15px_rgba(0,0,0,0.4)] animate-seal-pulse relative overflow-hidden bg-cover bg-center bg-no-repeat border-2 border-[#D4AF37]"
+                 style={{ backgroundImage: "url('/Wedding_Invite2/waxseal.jpeg')" }}
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
-               >
-                 {/* Gold leaf flakes on seal */}
-                 <div className="absolute inset-0 opacity-40 mix-blend-screen" style={{
-                   backgroundImage: 'radial-gradient(circle at 30% 30%, #D4AF37 1px, transparent 2px), radial-gradient(circle at 70% 60%, #D4AF37 1.5px, transparent 2px), radial-gradient(circle at 40% 80%, #D4AF37 1px, transparent 2px)',
-                   backgroundSize: '30px 30px'
-                 }} />
-                 
-                 {/* Embossed Monogram */}
-                 <svg className="w-16 h-16 text-[#F5DEB3] opacity-80" viewBox="0 0 100 100" style={{ filter: 'drop-shadow(0px -1px 1px rgba(0,0,0,0.8)) drop-shadow(0px 1px 1px rgba(255,255,255,0.3))' }}>
-                   <text x="50" y="65" fontFamily="var(--font-playfair)" fontSize="40" fontWeight="bold" textAnchor="middle" fill="currentColor">K&L</text>
-                 </svg>
-               </motion.button>
+               />
              ) : (
                // Cracked Fragments
                <div className="w-full h-full relative">

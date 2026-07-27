@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Envelope from '@/components/envelope/Envelope';
 import CountdownSection from '@/components/sections/CountdownSection';
+import BackgroundSlideshow from '@/components/ui/BackgroundSlideshow';
+import CoupleSection from '@/components/sections/CoupleSection';
 import EventTimeline from '@/components/sections/EventTimeline';
 import VenueMap from '@/components/sections/VenueMap';
 
@@ -11,6 +13,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center w-full relative">
+      <BackgroundSlideshow />
       {!isOpened && <Envelope onOpen={() => setIsOpened(true)} />}
       
       {/* Main Content - Smooth fade in after envelope is opened */}
@@ -34,6 +37,7 @@ export default function Home() {
           </div>
         </section>
         
+        <CoupleSection />
         <CountdownSection />
         <EventTimeline />
         <VenueMap />
