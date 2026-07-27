@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   },
 
   // Required since your repo is named 'Wedding_Invite2'
-  basePath: '/Wedding_Invite2',
+  // basePath: '/Wedding_Invite2',
 };
 
 export default nextConfig;

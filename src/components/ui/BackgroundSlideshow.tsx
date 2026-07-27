@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  '/Wedding_Invite2/bg1.jpeg',
-  '/Wedding_Invite2/bg2.jpeg'
+  '/bg1.jpeg',
+  '/bg2.jpeg'
 ];
 
 export default function BackgroundSlideshow() {

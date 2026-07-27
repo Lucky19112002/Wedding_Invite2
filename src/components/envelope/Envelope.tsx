@@ -264,7 +264,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
                <motion.button
                  onClick={handleOpen}
                  className="w-full h-full rounded-full flex items-center justify-center cursor-pointer shadow-[0_5px_15px_rgba(0,0,0,0.4)] animate-seal-pulse relative overflow-hidden bg-cover bg-center bg-no-repeat border-2 border-[#D4AF37]"
-                 style={{ backgroundImage: "url('/Wedding_Invite2/waxseal.jpeg')" }}
+                 style={{ backgroundImage: "url('/waxseal.jpeg')" }}
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
                />
