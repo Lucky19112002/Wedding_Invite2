@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const events = [
   {
     id: 'mangal-sanamum',
-    title: 'Mangal Sanamum',
+    title: 'Mangala Snanam',
     date: 'Dec 3, 2026',
     time: '11:00 AM',
     venue: '',
@@ -14,7 +14,7 @@ const events = [
   },
   {
     id: 'bida',
-    title: 'Bida',
+    title: 'Beeda',
     date: 'Dec 4, 2026',
     time: '11:00 AM',
     venue: '',
@@ -46,7 +46,7 @@ const events = [
   },
   {
     id: 'nikha',
-    title: 'Nikha',
+    title: 'Nikaah',
     date: 'Dec 5, 2026',
     time: '01:30 PM - 04:30 PM',
     venue: '',
@@ -59,7 +59,7 @@ export default function EventTimeline() {
     <section className="py-24 px-4 w-full bg-[#FFFFF0] relative overflow-hidden">
       <div className="absolute inset-0 bg-texture" />
       <div className="max-w-4xl mx-auto relative">
-        <motion.h2 
+        <motion.h2
           className="font-serif text-4xl md:text-5xl text-[#800000] text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function EventTimeline() {
           {events.map((event, index) => {
             const isEven = index % 2 === 0;
             return (
-              <motion.div 
+              <motion.div
                 key={event.id}
                 className={`flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full ${isEven ? 'md:flex-row-reverse' : ''}`}
                 initial={{ opacity: 0, x: isEven ? 50 : -50 }}
@@ -93,12 +93,12 @@ export default function EventTimeline() {
                     <p className="font-sans text-[#800000]/80 text-center text-sm italic">{event.venue}</p>
                   </div>
                 </div>
-                
+
                 {/* Timeline Dot */}
                 <div className="hidden sm:flex absolute left-4 md:left-1/2 w-8 h-8 bg-[#FFFFF0] border-4 border-[#D4AF37] rounded-full transform -translate-x-1/2 z-20 items-center justify-center">
-                   <div className="w-2 h-2 bg-[#800000] rounded-full" />
+                  <div className="w-2 h-2 bg-[#800000] rounded-full" />
                 </div>
-                
+
                 <div className="hidden md:block w-1/2" />
               </motion.div>
             );

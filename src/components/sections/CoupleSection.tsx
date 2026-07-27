@@ -49,7 +49,7 @@ export default function CoupleSection() {
               <br />
               & <br />
               <span className="font-semibold text-[#2A2A2A] not-italic">
-                Mrs. Haji Mastani Sayed
+                Mrs. Hajimasthani Sayed
               </span>
             </p>
           </motion.div>
@@ -85,7 +85,7 @@ export default function CoupleSection() {
             <p className="font-sans text-[#555] text-sm leading-relaxed italic">
               Son of <br />
               <span className="font-semibold text-[#2A2A2A] not-italic">
-                Dr. ShanNawabKhan S.S Pathan
+                Dr. ShahNawabKhan S.S Pathan
               </span>{" "}
               <br />
               & <br />
