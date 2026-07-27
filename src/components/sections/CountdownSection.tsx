@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // Set wedding date here
-const WEDDING_DATE = new Date('2026-12-25T10:00:00').getTime();
+const WEDDING_DATE = new Date('2026-12-05T10:00:00').getTime();
 
 export default function CountdownSection() {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,7 +43,7 @@ export default function CountdownSection() {
 
   return (
     <section className="py-24 px-4 w-full bg-[#F9E0E8] relative overflow-hidden flex flex-col items-center justify-center">
-      <div className="absolute inset-0 bg-texture opacity-20 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-texture" />
       
       <motion.div 
         className="z-10 text-center max-w-4xl mx-auto"

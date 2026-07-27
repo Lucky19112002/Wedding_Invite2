@@ -5,50 +5,59 @@ import { motion } from 'framer-motion';
 
 const events = [
   {
-    id: 'engagement',
-    title: 'Engagement',
-    date: 'Dec 23, 2026',
-    time: '10:00 AM',
-    venue: 'The Grand Palace, New Delhi',
-    icon: '💍'
+    id: 'mangal-sanamum',
+    title: 'Mangal Sanamum',
+    date: 'Dec 3, 2026',
+    time: '11:00 AM',
+    venue: '',
+    icon: '✨'
   },
   {
-    id: 'mehendi',
-    title: 'Mehendi',
-    date: 'Dec 24, 2026',
-    time: '04:00 PM',
-    venue: 'Bride\'s Residence',
-    icon: '🌿'
+    id: 'bida',
+    title: 'Bida',
+    date: 'Dec 4, 2026',
+    time: '11:00 AM',
+    venue: '',
+    icon: '🌸'
   },
   {
     id: 'haldi',
     title: 'Haldi',
-    date: 'Dec 25, 2026',
-    time: '09:00 AM',
-    venue: 'Bride\'s Residence',
+    date: 'Dec 4, 2026',
+    time: '01:00 PM',
+    venue: '',
     icon: '☀️'
   },
   {
-    id: 'sangeet',
-    title: 'Sangeet',
-    date: 'Dec 25, 2026',
+    id: 'mehendi',
+    title: 'Mehendi',
+    date: 'Dec 4, 2026',
     time: '07:00 PM',
-    venue: 'Royal Gardens',
-    icon: '🎵'
+    venue: '',
+    icon: '🌿'
   },
   {
-    id: 'wedding',
-    title: 'Wedding Ceremony',
-    date: 'Dec 26, 2026',
-    time: '08:00 PM',
-    venue: 'The Grand Palace, New Delhi',
-    icon: '✨'
+    id: 'bari',
+    title: 'Bari',
+    date: 'Dec 5, 2026',
+    time: '10:00 AM',
+    venue: '',
+    icon: '🎉'
+  },
+  {
+    id: 'nikha',
+    title: 'Nikha',
+    date: 'Dec 5, 2026',
+    time: '01:30 PM - 04:30 PM',
+    venue: '',
+    icon: '💍'
   }
 ];
 
 export default function EventTimeline() {
   return (
     <section className="py-24 px-4 w-full bg-[#FFFFF0] relative overflow-hidden">
+      <div className="absolute inset-0 bg-texture" />
       <div className="max-w-4xl mx-auto relative">
         <motion.h2 
           className="font-serif text-4xl md:text-5xl text-[#800000] text-center mb-16"

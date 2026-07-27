@@ -5,18 +5,14 @@ import Envelope from '@/components/envelope/Envelope';
 import CountdownSection from '@/components/sections/CountdownSection';
 import EventTimeline from '@/components/sections/EventTimeline';
 import VenueMap from '@/components/sections/VenueMap';
-import RSVPForm from '@/components/sections/RSVPForm';
 import MusicPlayer from '@/components/ui/MusicPlayer';
-import FloatingActions from '@/components/ui/FloatingActions';
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
     <main className="flex min-h-screen flex-col items-center w-full relative">
-      <MusicPlayer />
-      <FloatingActions />
-      
+      <MusicPlayer />      
       {!isOpened && <Envelope onOpen={() => setIsOpened(true)} />}
       
       {/* Main Content - Smooth fade in after envelope is opened */}
@@ -26,10 +22,10 @@ export default function Home() {
         }`}
       >
         <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center relative">
-          <div className="absolute inset-0 bg-texture opacity-30 pointer-events-none" />
+          <div className="absolute inset-0 bg-texture pointer-events-none" />
           <div className="glass p-8 md:p-12 rounded-3xl z-10 max-w-2xl w-full">
             <h1 className="font-serif text-5xl md:text-7xl text-[#800000] mb-4 tracking-wide">
-              Ananya & Rahul
+              Kareena & Lucky
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#2A2A2A] tracking-widest uppercase mb-8">
               Are getting married
@@ -43,7 +39,6 @@ export default function Home() {
         <CountdownSection />
         <EventTimeline />
         <VenueMap />
-        <RSVPForm />
       </div>
     </main>
   );

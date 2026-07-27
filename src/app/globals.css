@@ -47,8 +47,65 @@ body {
 }
 
 .bg-texture {
-  background-image: url('/textures/floral-emboss.png');
-  background-blend-mode: multiply;
-  background-size: cover;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMDAnIGhlaWdodD0nMzAwJyB2aWV3Qm94PScwIDAgMzAwIDMwMCc+CiAgPGcgZm9udC1mYW1pbHk9J0dlb3JnaWEsIHNlcmlmJyBmb250LXNpemU9JzI4JyBmb250LXN0eWxlPSdpdGFsaWMnIGZvbnQtd2VpZ2h0PSc2MDAnIHRleHQtYW5jaG9yPSdtaWRkbGUnIGRvbWluYW50LWJhc2VsaW5lPSdtaWRkbGUnIGZpbGw9JyM4MDAwMDAnPgogICAgPHRleHQgeD0nNTAnIHk9JzUwJyB0cmFuc2Zvcm09J3JvdGF0ZSgtMTUsIDUwLCA1MCknPksgJmFtcDsgTDwvdGV4dD4KICAgIDx0ZXh0IHg9JzIwMCcgeT0nMTUwJyB0cmFuc2Zvcm09J3JvdGF0ZSgxMCwgMjAwLCAxNTApJz5LICZhbXA7IEw8L3RleHQ+CiAgICA8dGV4dCB4PScxMDAnIHk9JzI1MCcgdHJhbnNmb3JtPSdyb3RhdGUoLTUsIDEwMCwgMjUwKSc+SyAmYW1wOyBMPC90ZXh0PgogICAgPHRleHQgeD0nMTUwJyB5PSc1MCcgZm9udC1zaXplPScyMCc+8J+MuDwvdGV4dD4KICAgIDx0ZXh0IHg9JzUwJyB5PScxNTAnIGZvbnQtc2l6ZT0nMjAnPvCfkpY8L3RleHQ+CiAgICA8dGV4dCB4PScyNTAnIHk9JzUwJyBmb250LXNpemU9JzIwJz7wn5iKPC90ZXh0PgogICAgPHRleHQgeD0nMTUwJyB5PScyMjAnIGZvbnQtc2l6ZT0nMjAnPuKcqDwvdGV4dD4KICAgIDx0ZXh0IHg9JzI1MCcgeT0nMjUwJyBmb250LXNpemU9JzIwJz7wn4y3PC90ZXh0PgogIDwvZz4KPC9zdmc+");
+  background-size: 300px 300px;
   background-attachment: fixed;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* --- Premium Envelope Redesign --- */
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-transform-opacity {
+  will-change: transform, opacity;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(212, 175, 55, 0.3) 50%,
+    rgba(212, 175, 55, 0) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes sealPulse {
+  0% { box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3), 0 0 0 0 rgba(139, 0, 0, 0.2); }
+  50% { box-shadow: 0 4px 20px rgba(139, 0, 0, 0.5), 0 0 0 10px rgba(139, 0, 0, 0); }
+  100% { box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3), 0 0 0 0 rgba(139, 0, 0, 0); }
+}
+
+.animate-seal-pulse {
+  animation: sealPulse 2.5s infinite;
+}
+
+.envelope-linen {
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px),
+    repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.1) 4px);
+  background-size: 10px 10px;
 }

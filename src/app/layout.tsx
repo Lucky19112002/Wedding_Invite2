@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "A & B Wedding Invitation",
+  title: "Kareena & Lucky Wedding Invitation",
   description: "Join us to celebrate our wedding!",
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-texture text-[#2A2A2A] bg-[#FFFFF0]">{children}</body>
+      <body className="min-h-full flex flex-col text-[#2A2A2A] bg-[#FFFFF0]">{children}</body>
     </html>
   );
 }
