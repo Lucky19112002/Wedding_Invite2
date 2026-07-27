@@ -5,14 +5,12 @@ import Envelope from '@/components/envelope/Envelope';
 import CountdownSection from '@/components/sections/CountdownSection';
 import EventTimeline from '@/components/sections/EventTimeline';
 import VenueMap from '@/components/sections/VenueMap';
-import MusicPlayer from '@/components/ui/MusicPlayer';
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
     <main className="flex min-h-screen flex-col items-center w-full relative">
-      <MusicPlayer />      
       {!isOpened && <Envelope onOpen={() => setIsOpened(true)} />}
       
       {/* Main Content - Smooth fade in after envelope is opened */}

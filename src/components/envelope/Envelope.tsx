@@ -116,7 +116,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
       transition={{ duration: 1.5, delay: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="relative w-full max-w-xl aspect-[4/3] mx-4 transform-style-3d">
+      <div className="relative w-full h-[90vh] md:h-auto md:max-w-xl md:aspect-[4/3] mx-4 md:mx-auto transform-style-3d">
         <motion.div
           className="w-full h-full relative transform-style-3d will-change-transform"
           initial={{ scale: 0.95, y: 20 }}
