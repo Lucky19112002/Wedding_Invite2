@@ -170,7 +170,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
             </svg> */}
 
             <div className="text-center w-full flex flex-col items-center gap-4 z-10 mt-12">
-              <h2 className="font-serif text-3xl md:text-5xl text-[#3A4533] tracking-widest mt-2">K & L</h2>
+              <h2 className="font-serif text-3xl md:text-5xl text-[#3A4533] tracking-widest mt-2">L & K</h2>
               <p className="font-sans text-xs md:text-sm uppercase tracking-[0.3em] text-[#7B906F] mt-2">Wedding Invite</p>
             </div>
           </motion.div>

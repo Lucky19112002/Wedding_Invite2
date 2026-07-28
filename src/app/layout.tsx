@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "K&L weds",
+  title: "L&K weds",
   description: "Join us to celebrate our wedding!",
 };
 

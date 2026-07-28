@@ -20,10 +20,51 @@ export default function CoupleSection() {
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-8 lg:gap-16">
-          {/* Bride */}
+          {/* Groom */}
           <motion.div
             className="glass p-8 md:p-10 rounded-2xl w-full max-w-sm flex flex-col items-center text-center border-t-4 border-[#D4AF37]"
             initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="w-24 h-24 mb-6 rounded-full bg-[#F9E0E8] border-2 border-[#D4AF37] flex items-center justify-center text-3xl overflow-hidden">
+              <img src="/groomepic.png" alt="Groom" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="font-serif text-3xl text-[#800000] mb-2">
+              Er. Lucky Pathan
+            </h3>
+            <p className="font-sans text-[#D4AF37] text-sm uppercase tracking-widest font-semibold mb-4">
+              B.Tech CSE <br /> Full Stack Developer
+            </p>
+            <p className="font-sans text-[#555] text-sm leading-relaxed italic">
+              Son of <br />
+              <span className="font-semibold text-[#2A2A2A] not-italic">
+                Dr. ShahNawabKhan S.S Pathan
+              </span>{" "}
+              <br />
+              & <br />
+              <span className="font-semibold text-[#2A2A2A] not-italic">
+                Mrs. Hasina Pathan
+              </span>
+            </p>
+          </motion.div>
+
+          {/* Center Ampersand */}
+          <motion.div
+            className="font-serif text-6xl text-[#D4AF37] opacity-60 hidden md:block"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            &
+          </motion.div>
+
+          {/* Bride */}
+          <motion.div
+            className="glass p-8 md:p-10 rounded-2xl w-full max-w-sm flex flex-col items-center text-center border-t-4 border-[#D4AF37]"
+            initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -50,47 +91,6 @@ export default function CoupleSection() {
               & <br />
               <span className="font-semibold text-[#2A2A2A] not-italic">
                 Mrs. Hajimasthani Sayed
-              </span>
-            </p>
-          </motion.div>
-
-          {/* Center Ampersand */}
-          <motion.div
-            className="font-serif text-6xl text-[#D4AF37] opacity-60 hidden md:block"
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            &
-          </motion.div>
-
-          {/* Groom */}
-          <motion.div
-            className="glass p-8 md:p-10 rounded-2xl w-full max-w-sm flex flex-col items-center text-center border-t-4 border-[#D4AF37]"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="w-24 h-24 mb-6 rounded-full bg-[#F9E0E8] border-2 border-[#D4AF37] flex items-center justify-center text-3xl overflow-hidden">
-              <img src="/groomepic.png" alt="Groom" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="font-serif text-3xl text-[#800000] mb-2">
-              Er. Lucky Pathan
-            </h3>
-            <p className="font-sans text-[#D4AF37] text-sm uppercase tracking-widest font-semibold mb-4">
-              B.Tech CSE <br /> Full Stack Developer
-            </p>
-            <p className="font-sans text-[#555] text-sm leading-relaxed italic">
-              Son of <br />
-              <span className="font-semibold text-[#2A2A2A] not-italic">
-                Dr. ShahNawabKhan S.S Pathan
-              </span>{" "}
-              <br />
-              & <br />
-              <span className="font-semibold text-[#2A2A2A] not-italic">
-                Mrs. Hasina Pathan
               </span>
             </p>
           </motion.div>

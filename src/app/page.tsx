@@ -26,7 +26,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-texture pointer-events-none" />
           <div className="glass p-8 md:p-12 rounded-3xl z-10 max-w-2xl w-full">
             <h1 className="font-serif text-5xl md:text-7xl text-[#800000] mb-4 tracking-wide">
-              Kareena & Lucky
+              Lucky & Kareena
             </h1>
             <p className="font-sans text-lg md:text-xl text-[#2A2A2A] tracking-widest uppercase mb-8">
               Are getting married
