@@ -29,7 +29,11 @@ export default function CoupleSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="w-24 h-24 mb-6 rounded-full bg-[#F9E0E8] border-2 border-[#D4AF37] flex items-center justify-center text-3xl overflow-hidden">
-              <img src="/groomepic.png" alt="Groom" className="w-full h-full object-cover" />
+              <img
+                src="/groomepic.png"
+                alt="Groom"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="font-serif text-3xl text-[#800000] mb-2">
               Er. Lucky Pathan
@@ -40,7 +44,7 @@ export default function CoupleSection() {
             <p className="font-sans text-[#555] text-sm leading-relaxed italic">
               Son of <br />
               <span className="font-semibold text-[#2A2A2A] not-italic">
-                Dr. ShahNawabKhan S.S Pathan
+                Dr. ShahNawabKhan S Pathan
               </span>{" "}
               <br />
               & <br />
