@@ -13,6 +13,14 @@ const events = [
     icon: '✨'
   },
   {
+    id: 'pellikoduku',
+    title: 'Pellikoduku',
+    date: 'Dec 3, 2026',
+    time: '04:00 PM',
+    venue: '',
+    icon: '🫅🏻'
+  },
+  {
     id: 'bida',
     title: 'Beeda',
     date: 'Dec 4, 2026',
