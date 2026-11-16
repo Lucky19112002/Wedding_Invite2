@@ -4,8 +4,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaPlay, FaPause, FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
 
-export default function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
+interface MusicPlayerProps {
+  autoPlay?: boolean;
+}
+
+export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -18,6 +22,10 @@ export default function MusicPlayer() {
       audioRef.current.pause();
     }
   }, [isPlaying]);
+
+  useEffect(() => {
+    if (autoPlay) setIsPlaying(true);
+  }, [autoPlay]);
 
   useEffect(() => {
     if (audioRef.current) {

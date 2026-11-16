@@ -7,6 +7,7 @@ import BackgroundSlideshow from '@/components/ui/BackgroundSlideshow';
 import CoupleSection from '@/components/sections/CoupleSection';
 import EventTimeline from '@/components/sections/EventTimeline';
 import VenueMap from '@/components/sections/VenueMap';
+import MusicPlayer from '@/components/ui/MusicPlayer';
 
 export default function Home() {
   const [isOpened, setIsOpened] = useState(false);
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center w-full relative">
       <BackgroundSlideshow />
       {!isOpened && <Envelope onOpen={() => setIsOpened(true)} />}
+      {isOpened && <MusicPlayer autoPlay />}
       
       {/* Main Content - Smooth fade in after envelope is opened */}
       <div 
