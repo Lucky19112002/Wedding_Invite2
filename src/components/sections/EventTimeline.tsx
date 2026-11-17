@@ -14,11 +14,11 @@ const events = [
   },
   {
     id: 'pellikoduku',
-    title: 'Pellikoduku',
+    title: 'Pellikoduku / Pellikuthuru',
     date: 'Dec 3, 2026',
     time: '04:00 PM',
     venue: '',
-    icon: '🫅🏻'
+    icon: '🫅🏻👸🏻'
   },
   {
     id: 'bida',
